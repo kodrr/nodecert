@@ -1,9 +1,9 @@
-'use strict'
+"use strict";
 
-const { spawn } = require('child_process')
+const { spawn } = require("child_process");
 
-function exercise (command, args) {
-  return spawn(command, args)
+function exercise(command, args) {
+  return spawn(command, args, ["ignore", "inherit", process.stdin]);
 }
 
-module.exports = exercise
+module.exports = exercise;
