@@ -19,7 +19,7 @@ const obj1 = { fn: Obj.getSomething };
 obj1.fn();
 
 function myFunction() {
-  console.log(this); // Output: [object Window] (in a browser)
+  console.log("this inside a function", this); // Output: [object Window] (in a browser) or in node the global object
 }
 
 myFunction();

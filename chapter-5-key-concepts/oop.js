@@ -3,6 +3,12 @@
 //encapsulation - which methods and properties needs to be hidden
 //polymorphism - many forms, child inherits method from parent but can return different bahavior from that of the parent, different face but same method for resusability flexibility
 
+// All JavaScript objects have prototypes. A prototype is an implicit reference to another object that is
+// queried in property lookups. If an object doesn't have a particular property, the object's prototype is
+// checked for that property. If the object's prototype does not have that property, the object's prototype's
+// prototype is checked and so on. This is how inheritance in JavaScript works, JavaScript is a prototypal
+// language.
+
 class Character {
   constructor(speed) {
     this.speed = speed;
