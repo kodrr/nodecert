@@ -1,14 +1,14 @@
 let name = {
- first: 'Noel',
- middle: 'Tamayao',
- last: 'Lauigan'  
-}
+  first: "Nelson",
+  middle: "Obama",
+  last: "Mandela",
+};
 
-let name2 = {...name, first:'Pogi'}
+let name2 = { ...name, first: "Donald" };
 
-console.log(name2)
+console.log(name2);
 
-let names = ['Pedro', 'Juan', 'Celia']
+let names = ["Pedro", "Juan", "Celia"];
 
-let newNames = names.map((name)=>'Moses')
-console.log(newNames)
+let newNames = names.map((name) => "Moses");
+console.log(newNames);
