@@ -30,6 +30,7 @@ readable.on("end", () => {
 });
 
 //iterable structure
+//Readable.from utility function sets objectMode to true by default
 // const { Readable } = require("stream");
 // const readable = Readable.from(["some", "data", "to", "read"]);
 // readable.on("data", (data) => {
