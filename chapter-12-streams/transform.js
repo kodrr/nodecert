@@ -19,6 +19,7 @@ const createTransformStream = () => {
     decodeStrings: false,
     encoding: "hex",
     transform(chunk, enc, next) {
+      console.log("chunk", chunk);
       scrypt(chunk, "a-salt", 32, (err, key) => {
         if (err) {
           next(err);
