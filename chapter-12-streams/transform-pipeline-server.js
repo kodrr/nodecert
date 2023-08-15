@@ -7,6 +7,7 @@ const createTransformStream = () => {
     decodeStrings: false,
     encoding: "hex",
     transform(chunk, enc, next) {
+      console.log(chunk);
       scrypt(chunk, "a-salt", 32, (err, key) => {
         if (err) {
           next(err);
@@ -17,6 +18,7 @@ const createTransformStream = () => {
     },
   });
 };
+
 net
   .createServer((socket) => {
     const transform = createTransformStream();

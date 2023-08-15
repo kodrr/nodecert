@@ -1,5 +1,6 @@
 "use strict";
 const net = require("net");
+
 net
   .createServer((socket) => {
     const interval = setInterval(() => {
