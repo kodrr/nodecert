@@ -15,7 +15,7 @@ const createUppercaseStream = () => {
 pipeline(
   createReadStream(__filename),
   createUppercaseStream(),
-  createWriteStream(join(__dirname, "pipeline-transform.txt")),
+  createWriteStream(join(__dirname, "read-write-stream-transform.txt")),
   (err) => {
     if (err) {
       console.error(err);

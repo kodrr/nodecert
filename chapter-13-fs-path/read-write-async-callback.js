@@ -6,7 +6,7 @@ readFile(__filename, { encoding: "utf-8" }, (err, data) => {
     console.log(err);
     return;
   }
-  const out = join(__dirname, "out-async.txt");
+  const out = join(__dirname, "read-write-async-callback.txt");
   writeFile(out, data.toUpperCase(), (err) => {
     if (err) {
       console.log("error in write async", err);
