@@ -5,3 +5,4 @@ const contents = readFileSync(__filename, { encoding: "utf-8" });
 writeFileSync(join(__dirname, "write-filesync.txt"), contents.toUpperCase(), {
   flag: "a",
 });
+//flag: 'a' -- append to the write-filesync.txt
