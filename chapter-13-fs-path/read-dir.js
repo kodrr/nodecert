@@ -31,6 +31,8 @@ createServer((req, res) => {
       res.end("Server Error");
       return;
     }
+    //dir is not stream but it is an async iterable
+    console.log("this is dir", dir);
     const dirStream = Readable.from(dir);
     const entryStream = createEntryStream();
     res.setHeader("Content-Type", "application/json");

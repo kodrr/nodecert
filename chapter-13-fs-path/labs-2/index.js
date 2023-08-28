@@ -51,7 +51,6 @@ function exercise(project) {
 
       // TODO - only set the answer variable if the filepath
       // is both newly created AND does not point to a directory
-
       if (evt === "rename" && stat.isFile()) {
         answer = filepath;
       }
