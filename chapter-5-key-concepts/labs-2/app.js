@@ -14,13 +14,13 @@ class Leopard {
     this.name = name;
   }
   hiss() {
-    console.log(`${this.name} the leopard: hsss`);
+    console.log(`${this.name} hsss`);
   }
 }
 
 class Lynx extends Leopard {
   constructor(name) {
-    super(`${name} the lynx:`);
+    super(name);
   }
   //this refers to the Lynx object
   //this.name is the example of explanation about this that its where its been called
@@ -32,7 +32,7 @@ class Lynx extends Leopard {
 
 class Cat extends Lynx {
   constructor(name) {
-    super(`${name} the cat:`);
+    super(name);
   }
   //this refers to the Cat object
   meow() {
@@ -40,13 +40,10 @@ class Cat extends Lynx {
   }
 }
 
-const felix = new Cat("Felix"); //TODO replace null with instantiation of a cat
+const felix = new Cat("Felix the cat: "); //TODO replace null with instantiation of a cat
 felix.meow(); // prints Felix the cat: meow
 felix.purr(); // prints Felix the cat: prrr
 felix.hiss(); // prints Felix the cat: hsss
-
-const lynx = new Lynx("TEST");
-lynx.purr();
 
 // prototype checks, do not remove
 const felixProto = Object.getPrototypeOf(felix);
