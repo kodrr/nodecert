@@ -1,6 +1,5 @@
 "use strict";
 
-console.log();
 console.group("# package resolution");
 console.log(`require('pino')`, "\t", " =>", require.resolve("pino"));
 console.log(`require('standard')`, "\t", " =>", require.resolve("standard"));
@@ -17,7 +16,6 @@ console.log(`require('./format.js')`, " =>", require.resolve("./format.js"));
 console.groupEnd();
 console.log();
 console.group("# core APIs resolution");
-console.log(`require('fs')`, "\t", " =>", require.resolve("fs"));
-console.log(`require('util')`, "\t", " =>", require.resolve("util"));
+console.log("require('fs')", "\t", " =>", require.resolve("fs"));
+console.log("require('util')", "\t", " =>", require.resolve("util"));
 console.groupEnd();
-console.log();
