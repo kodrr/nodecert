@@ -39,6 +39,7 @@ try {
   } else if (err.code === "ERR_AMOUNT_MUST_EXCEED_ZERO") {
     console.error("out of range");
   } else if (err.code === "ERR_MUST_BE_EVEN") {
+    console.log("this is the name of error Object", err.name);
     console.error("cannot be odd");
   } else {
     console.error("Unknown error", err);
