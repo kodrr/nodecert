@@ -17,7 +17,6 @@ const assert = require("assert");
 //   name: { first: "David", second: "Clements" },
 // });
 
-const assert = require("assert");
 const obj = {
   id: 1,
   name: { first: "David", second: "Clements" },
@@ -37,3 +36,4 @@ const add = (a, b) => {
 //throws
 assert.throws(() => add("5", "5"), Error("inputs must be numbers"));
 assert.doesNotThrow(() => add(5, 5));
+assert.equal(add(5, 5), 10);
