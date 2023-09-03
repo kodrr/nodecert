@@ -11,7 +11,7 @@ const { Readable } = require("stream");
 const createReadStream = () => {
   const data = ["some", "data", "to", "read"];
   return new Readable({
-    //objectMode: true, if this is not use default mode is binary meaning buffer
+    //objectMode: true, if not indicated it will default to false which is buffer data
     //encoding here will turn string to buffer to string
     encoding: "utf-8",
     read() {
