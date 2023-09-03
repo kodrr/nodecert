@@ -25,6 +25,9 @@ net
     const interval = setInterval(() => {
       socket.write("beat");
     }, 1000);
+
+    // The pipeline command will call pipe on every stream passed to it, and will allow a function to be
+    // passed as the final function - callback handler
     pipeline(socket, transform, socket, (err) => {
       if (err) {
         console.error("there was a socket error", err);

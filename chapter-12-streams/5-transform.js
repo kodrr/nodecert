@@ -1,8 +1,8 @@
-// "use strict";
+"use strict";
 // const { createGzip } = require("zlib");
 // const transform = createGzip();
 
-// transform.on("data", (datacj) => {
+// transform.on("data", (data) => {
 //   console.log("got gzip", data.toString("base64"));
 // });
 
@@ -11,7 +11,6 @@
 //   transform.end("second");
 // }, 500);
 
-"use strict";
 const { Transform } = require("stream");
 const { scrypt } = require("crypto");
 const createTransformStream = () => {

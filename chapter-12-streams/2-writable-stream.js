@@ -19,8 +19,8 @@ const createWriteStream = (data) => {
     // If we want to support strings and any other JavaScript value, we can instead set objectMode to true to
     // create an object-mode writable stream:
     //objectMode: true,
-    write(chunck, enc, next) {
-      data.push(chunck);
+    write(chunk, enc, next) {
+      data.push(chunk);
       next();
     },
   });
