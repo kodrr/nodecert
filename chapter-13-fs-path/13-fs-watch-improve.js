@@ -2,7 +2,9 @@ const { join, resolve } = require("path");
 const { watch, readdirSync, statSync } = require("fs");
 
 const cwd = resolve(".");
+
 const files = new Set(readdirSync("."));
+
 watch(".", (evt, filename) => {
   try {
     const { ctimeMs, mtimeMs } = statSync(join(cwd, filename));

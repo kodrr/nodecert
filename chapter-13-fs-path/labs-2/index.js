@@ -5,11 +5,13 @@ const fs = require("fs");
 const { promisify } = require("util");
 const timeout = promisify(setTimeout);
 const project = join(__dirname, "project");
+
 try {
   fs.rmdirSync(project, { recursive: true });
 } catch (err) {
   console.error(err);
 }
+
 fs.mkdirSync(project);
 
 let answer = "";
