@@ -4,7 +4,9 @@
 //   const { user, system } = process.cpuUsage();
 //   console.log(uptime, user, system, (user + system) / 1000000);
 // };
+
 // outputStats();
+
 // setTimeout(() => {
 //   outputStats();
 //   const now = Date.now();
@@ -25,6 +27,7 @@ while (iterations--) {
   stats.push(process.memoryUsage());
 }
 console.table(stats);
+
 //The heapTotal metric refers to the total memory allocated for a process.
 //rss Resident Set Size is the amount of used RAM for the process
 //heapUsed metric is the total amount of memory used across both RAM and swap space.

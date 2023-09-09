@@ -1,7 +1,7 @@
 "use strict";
 
 console.log(process.memoryUsage());
-const { profile } = require("console");
+
 const os = require("os");
 setTimeout(() => {
   console.log(process.uptime()); // TODO output uptime of process

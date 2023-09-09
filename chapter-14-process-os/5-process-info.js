@@ -7,3 +7,6 @@ console.log("Process Uptime", process.uptime());
 setTimeout(() => {
   console.log("Process Uptime", process.uptime());
 }, 1000);
+
+//process.cwd() -- will return the cwd of the current process like child process
+//process.env.PWD -- it will juts return the process where it started
