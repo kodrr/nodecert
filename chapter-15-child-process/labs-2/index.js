@@ -3,7 +3,10 @@
 const { spawn } = require("child_process");
 
 function exercise(command, args) {
-  return spawn(command, args, ["ignore", "inherit", process.stdin]);
+  const cp = spawn(command, args, {
+    stdio: ["ignore", "inherit", "pipe"],
+  });
+  return cp;
 }
 
 module.exports = exercise;
