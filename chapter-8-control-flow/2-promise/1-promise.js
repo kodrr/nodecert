@@ -1,7 +1,5 @@
 const { readFile } = require("fs");
 
-//pwede naman kasing callback agad eh kung need mo agad nung result
-//or pwede din pala pero mag kaka callback hell ka
 // function myAsyncCbFn(){
 //     readFile(__filename, (err, data)=>{
 //         if(err)return err
@@ -21,7 +19,7 @@ function myAsyncOps() {
 // myAsyncCbFn()
 myAsyncOps()
   .then((data) => {
-    console.log("this is data", data);
+    console.log("this is data", data); //data is buffer
   })
   .catch((err) => {
     console.log("this is err", err);
