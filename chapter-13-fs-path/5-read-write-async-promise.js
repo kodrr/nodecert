@@ -1,6 +1,7 @@
 "use strict";
 const { join } = require("path");
-const { readFile, writeFile } = require("fs").promises;
+const { readFile, writeFile } = require("fs/promises");
+
 async function run() {
   const contents = await readFile(__filename, { encoding: "utf8" });
   console.log("this is contents", contents);

@@ -1,6 +1,5 @@
-const { error } = require("console");
 const { readdirSync, readdir } = require("fs");
-const { readdir: readdirprom } = require("fs").promises;
+const { readdir: readdirprom } = require("fs/promises");
 
 try {
   console.log("sync:", readdirSync(__dirname));
