@@ -29,7 +29,7 @@ function doTask(amount) {
 }
 
 try {
-  //it will not be handle in the catch because it will run after 100ms
+  //it will not be handled in the catch because it will run after 100ms
   setTimeout(() => {
     const result = doTask(3);
     console.log("result", result);
