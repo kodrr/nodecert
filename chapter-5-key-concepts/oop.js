@@ -1,7 +1,8 @@
-//inheritance - child class inherits properties and methods from paren class
-//abstraction - Abstraction is a principle that says that a class should only represent information that is relevant to the problem's context. In plain English, only expose to the outside the properties and methods that you're going to use. If it's not needed, don't expose it.
-//encapsulation - which methods and properties needs to be hidden
-//polymorphism - many forms, child inherits method from parent but can return different bahavior from that of the parent, different face but same method for resusability flexibility
+//encapsulation - which methods and properties needs to be hidden, private, public, protected
+//inheritance - child class inherits properties and methods from parent class , super and extends
+//polymorphism - many forms, child inherits method from parent but can return different bahavior from that of the parent. inherit method from parent or can create/tweak own method in the subclass
+//different face but same method for resusability flexibility
+//abstraction - you only know the input and output of a method, you dont have to undestand the inner mechanics on how it works, it's "abstracted"
 
 // All JavaScript objects have prototypes. A prototype is an implicit reference to another object that is
 // queried in property lookups. If an object doesn't have a particular property, the object's prototype is
@@ -30,15 +31,15 @@ class Enemy extends Character {
 class Alien extends Enemy {
   constructor(name, phrase, power, speed) {
     super(name, phrase, power, speed);
-    this.species = "alien";
+    this.species = 'alien';
   }
-  fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!");
+  fly = () => console.log('Zzzzzziiiiiinnnnnggggg!!');
 }
 
 class Bug extends Enemy {
   constructor(name, phrase, power, speed) {
     super(name, phrase, power, speed);
-    this.species = "bug";
+    this.species = 'bug';
   }
   hide = () => console.log("You can't catch me now!");
 }
@@ -46,21 +47,21 @@ class Bug extends Enemy {
 class Robot extends Enemy {
   constructor(name, phrase, power, speed) {
     super(name, phrase, power, speed);
-    this.species = "robot";
+    this.species = 'robot';
   }
-  transform = () => console.log("Optimus prime!");
+  transform = () => console.log('Optimus prime!');
 }
 
-const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50);
-const alien2 = new Alien("Lien", "Run for your lives!", 15, 60);
-const bug1 = new Bug("Buggy", "Your debugger doesn't work with me!", 25, 100);
-const bug2 = new Bug("Erik", "I drink decaf!", 5, 120);
-const Robot1 = new Robot("Tito", "I can cook, swim and dance!", 125, 30);
-const Robot2 = new Robot("Terminator", "Hasta la vista, baby!", 155, 40);
+const alien1 = new Alien('Ali', "I'm Ali the alien!", 10, 50);
+const alien2 = new Alien('Lien', 'Run for your lives!', 15, 60);
+const bug1 = new Bug('Buggy', "Your debugger doesn't work with me!", 25, 100);
+const bug2 = new Bug('Erik', 'I drink decaf!', 5, 120);
+const Robot1 = new Robot('Tito', 'I can cook, swim and dance!', 125, 30);
+const Robot2 = new Robot('Terminator', 'Hasta la vista, baby!', 155, 40);
 
 //object composition - by using composition we can assign properties and methods to objects in a more flexible way than inheritance allows, so objects only get what they need and nothing else.
 
-const bug1 = new Bug("Buggy", "Your debugger doesn't work with me!", 25, 100);
+const bug1 = new Bug('Buggy', "Your debugger doesn't work with me!", 25, 100);
 
 const addFlyingAbility = (obj) => {
   obj.fly = () => console.log(`Now ${obj.name} can fly!`);
